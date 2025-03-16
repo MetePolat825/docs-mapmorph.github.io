@@ -1,0 +1,188 @@
+/* smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset body margin and set up basic layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #bcbcbc;
+    background-image: url('media/background_img.jpg');
+    background-size: 75%; /* Zoom out - adjust this percentage to control zoom */
+    background-position: center; /* Center the background image */
+    height: 100%;
+    flex-direction: column;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 15%;
+    background-color: #e0e0e0;
+    padding: 1%;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content styling */
+.content {
+    width: 60%; /* Keeps the width consistent */
+    min-height: 500px; /* Ensures the height stays at least this size */
+    height: auto; /* Allows it to expand if there is more content */
+    margin: auto; /* Centers the content horizontally */
+    border: 3px solid black;
+    padding: 2%; /* Creates inner spacing */
+    background-color: #f7f7f7;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width/height */
+    flex: 1; /* Allows the content to expand to fill the space */
+}
+
+
+/* Link styling */
+.sidebar a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Header and list styling */
+h1 { color: #333; font-size: 24px; }
+h2 { color: #0066cc; margin-top: 20px; }
+ul { list-style-type: none; padding: 0; }
+ul li { margin-bottom: 10px; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background: #333;
+        color: white;
+        padding-top: 60px;
+        z-index: 10;
+    }
+
+    .toggle-btn {
+        display: block;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+}
+
+
+/* Search bar */
+#tocSearch {
+    width: 100%;
+    padding: 3%;
+    margin-bottom: 3%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sidebar_header {
+    padding: 5px;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+.center_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 12px;
+  }
+
+.center_img_sidebar_hdr{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border: 2px solid black;
+    border-radius: 12px;
+  }
+
+.image-description{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 600px;
+}
+
+.image-source{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 600px;
+}
+
+.center_txt{
+    padding: 0.5%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.footer {
+    background-color: #f7f7f7;
+    color: black;
+    text-align: center;
+    padding: 2%;
+    margin: auto;
+    width: 50%;
+    border: #333;
+    border-radius: 3px;
+
+}
+
+.footer a {
+    color: #66ccff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Apply border to table and cells */
+table {
+    border: 1px groove black; /* Grooved black border */
+}
+
+th, td {
+    border: 1px groove black; /* Grooved black border */
+    padding: 0.5rem; /* Optional: Add padding for content */
+  }
